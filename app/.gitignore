@@ -14,6 +14,7 @@
 Android/bin/
 Android/gen/
 Android/assets/
+Android/ant-build/
 
 # generated files
 bin/
