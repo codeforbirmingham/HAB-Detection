@@ -6,6 +6,8 @@ observations by asking series of questions about the HAB, and the application wi
 of the sighting (e.g. name of water body, proximity to water treatment facility, etc) using GPS features of
 users’ smart phones. The application will also guide users through the EPA's required submission process.
 
+View the approved project proposal on the EPA's website [here](http://developer.epa.gov/hab-challenge/).
+
 ## What is a HAB?
 
 A HAB is [an algal bloom that causes negative impacts to other organisms via production of natural toxins, mechanical
