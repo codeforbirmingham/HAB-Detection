@@ -31,8 +31,45 @@ var loco = function(){
 
 }
 
+var photo = function(){
+	self = this;
+
+	this.location = "";
+
+	this.getNew = function(){
+		console.log("Getting new photo");
+		navigator.camera.getPicture(
+			self.success,
+			self.fail,
+			{
+				quality: 50,
+				destinationType: Camera.DestinationType.DATA_URL
+			}
+		);
+	}
+	this.getCurrent = function(){
+		console.log("Getting Current photo");
+	}
+	this.display = function(imageData){
+		console.log("Displaying photo");
+		var image = document.getElementById('imageDIV');
+    		image.src = "data:image/jpeg;base64," + imageData;
+	}
+
+	this.success = function(imageData){
+		console.log("Camera Success");
+		self.display(imageData);
+	}
+	this.fail = function(){
+		console.log("Camera Failed");
+	}
+
+}
+
 //Global Vars
 var loco = new loco();
 	loco.get();
+
+var photo = new photo();
 
 //Global Functions
