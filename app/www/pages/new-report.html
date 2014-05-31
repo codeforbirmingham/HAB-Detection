@@ -1,4 +1,23 @@
 <div data-role="view" id="drawer-home" data-layout="drawer-layout" data-title="EPA HAB Detection">
-	<ul data-role="listview" data-style="inset">
+	<ul data-role="listview" data-style="inset" data-type="group">
+		<li>
+			<ul>
+				<li>
+					<div id="imageDIV" style="min-height:200px;text-align:center;background-image: url(img/placeholder.png);background-position: center;background-repeat: no-repeat;background-color: rgb(213,213,213);">
+						<img style="min-height:200px; width:100%;" id="image" src=""/>
+					</div>				
+				</li>
+			</ul>
+		</li>
+		<li>
+			<ul> 
+				<li>
+					<div style="display:block; text-align:center">
+						<a id="newButton" data-role="button" style="float:left; width:38%" onclick="getNewPhoto()">New</a>
+						<a id="existingButton" data-role="button"style="float:right; width:38%" onclick="getExistingPhoto();">Existing</a>
+					</div>
+				</li>
+			</ul>
+		</li>
 	</ul>
 </div>
