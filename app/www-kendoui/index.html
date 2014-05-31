@@ -1,0 +1,75 @@
+<html>
+<head>
+	<title> GreenPlanet 21 Kendo </title>
+
+	<!-- KendoUI CSS-->
+	<link href="css/gen/kendo.common.min.css" rel="stylesheet" />
+    <link href="css/gen/kendo.default.min.css" rel="stylesheet" />
+    <link href="css/gen/kendo.mobile.all.min.css" rel="stylesheet" />
+    
+	<!-- User CSS -->
+	<link href="css/main.css" rel="stylesheet" />
+
+	<!-- Cordova Scripts-->
+	<script type="text/javascript" src="cordova.js"></script>
+</head>
+<body>
+	<div data-role="layout" data-id="drawer-layout">
+	    <header data-role="header">
+	        <div data-role="navbar">
+	            <a data-role="button" data-rel="drawer" href="#my-drawer" data-icon="drawer-button" data-align="left"></a>
+	            <span data-role="view-title"></span>
+	        </div>
+	    </header>
+	</div>
+	<div data-role="view" id="drawer-home" data-layout="drawer-layout" data-title="EPA HAB Detection">
+	    <ul data-role="listview" data-style="inset">
+	        <li>
+	        	<img src="google.com" />
+	        </li>
+	    </ul>
+	</div>
+
+	<div data-role="drawer" id="my-drawer" style="width: 270px" data-views="['drawer-home', 'drawer-starred', 'drawer-deleted', 'drawer-spam', 'drawer-drafts', 'drawer-sent', '/kendo-ui/mobile/m/drawer/index.html']">
+	    <ul data-role="listview" data-type="group">
+	        <li>Mailbox
+	            <ul>
+	                <li data-icon="inbox"><a href="#drawer-home" data-transition="none">Inbox</a></li>
+	                <li data-icon="star"><a href="#drawer-starred" data-transition="none">Starred Items</a></li>
+	                <li data-icon="compose"><a href="#drawer-drafts" data-transition="none">Drafts</a></li>
+	                <li data-icon="sent"><a href="#drawer-sent" data-transition="none">Sent Items</a></li>
+	                <li data-icon="trash"><a href="#drawer-deleted" data-transition="none">Deleted Items</a></li>
+	                <li data-icon="spam"><a href="#drawer-spam" data-transition="none">Spam</a></li>
+	            </ul>
+	        </li>
+	        <li>Tasks
+	            <ul>
+	                <li>To Do</li>
+	                <li>In Progress</li>
+	                <li>Done</li>
+	                <li>High Priority</li>
+	                <li>Low Priority</li>
+	            </ul>
+	        </li>
+	        <li>Account
+	            <ul>
+	                <li data-icon="settings">Settings</li>
+	                <li data-icon="off">Log Out</li>
+	            </ul>
+	        </li>
+	    </ul>
+	</div>
+
+	<!-- Javascript Files -->
+	<!-- KendoUi Scripts -->
+    <script type="text/javascript" src="js/gen/jquery.min.js"></script>
+    <script type="text/javascript" src="js/gen/kendo.all.min.js"></script>
+
+	<!-- Init -->
+ 	<script>
+		new kendo.mobile.Application($(document.body), {
+         skin: "flat",
+     });
+	</script>
+</body>
+</html>
