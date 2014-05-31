@@ -1,39 +1,73 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Harmful Algae Bloom Identification</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="css/app.css"/>
-</head>
-<body>
-  <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-  </ul>
+<html>
+  <head>
+    <title> GreenPlanet 21 Kendo </title>
 
-  <!--[if lt IE 7]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-  <![endif]-->
+    <!-- KendoUI CSS-->
+    <link href="css/lib/kendo.common.min.css" rel="stylesheet" />
+    <link href="css/lib/kendo.default.min.css" rel="stylesheet" />
+    <link href="css/lib/kendo.mobile.all.min.css" rel="stylesheet" />
+    
+    <!-- User CSS -->
+    <link href="css/main.css" rel="stylesheet" />
 
-  <div ng-view></div>
+    <!-- Cordova Scripts-->
+    <script type="text/javascript" src="cordova.js"></script>
+  </head>
+  <body>
+    <div data-role="layout" data-id="drawer-layout">
+      <header data-role="header">
+	       <div data-role="navbar">
+	         <a data-role="button" data-rel="drawer" href="#my-drawer" data-icon="drawer-button" data-align="left"></a>
+	          <span data-role="view-title"></span>
+	       </div>
+      </header>
+    </div>
+    <div data-role="view" id="drawer-home" data-layout="drawer-layout" data-title="EPA HAB Detection">
+      <ul data-role="listview" data-style="inset">
+        <li>
+          <img src="https://www.google.com/images/srpr/logo11w.png" width="100%" />
+        </li>
+      	<li>
+      	   <a href="pages/main-menu.html" data-transition="slide">Login</a>
+      	</li>
+        <li>
+          <a href="#">Continue without sign in</a>
+        </li>
+      </ul>
+    </div>
 
-  <div>Angular seed app: v<span app-version></span></div>
+    <div data-role="drawer" id="my-drawer" style="width: 270px" data-views="['drawer-home', 'drawer-starred', 'drawer-deleted', 'drawer-spam', 'drawer-drafts', 'drawer-sent', '/kendo-ui/mobile/m/drawer/index.html']">
+      <ul data-role="listview" data-type="group">
+      	<li>Mailbox
+      	  <ul>
+      	    <li data-icon="inbox"><a href="#drawer-home" data-transition="none">Submit</a></li>
+      	    <li data-icon="star"><a href="#drawer-starred" data-transition="none">Starred Items</a></li>
+      	    <li data-icon="compose"><a href="#drawer-drafts" data-transition="none">Drafts</a></li>
+      	    <li data-icon="sent"><a href="#drawer-sent" data-transition="none">Sent Items</a></li>
+      	    <li data-icon="trash"><a href="#drawer-deleted" data-transition="none">Deleted Items</a></li>
+      	    <li data-icon="spam"><a href="#drawer-spam" data-transition="none">Spam</a></li>
+      	  </ul>
+      	</li>
+      	<li>Account
+      	  <ul>
+      	    <li data-icon="settings">Settings</li>
+      	    <li data-icon="off">Log Out</li>
+      	  </ul>
+      	</li>
+      </ul>
+    </div>
 
-  <!-- In production use:
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-  -->
-  <script src="angular/angular.js"></script>
-  <script src="angular/angular-route.js"></script>
-  <script src="js/app.js"></script>
-  <script src="js/services.js"></script>
-  <script src="js/controllers.js"></script>
-  <script src="js/filters.js"></script>
-  <script src="js/directives.js"></script>
-</body>
+    <!-- Javascript Files -->
+    <!-- KendoUi Scripts -->
+    <script type="text/javascript" src="js/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="js/lib/kendo.all.min.js"></script>
+
+    <!-- Init -->
+    <script>
+     new kendo.mobile.Application($(document.body), {
+       skin: "flat",
+
+     });
+    </script>
+  </body>
 </html>
