@@ -18,9 +18,7 @@
       <header data-role="header">
 	       <div data-role="navbar">
 	          <a data-role="backbutton" data-icon="reply" data-align="left">Back</a>
-            <a data-role="button" data-rel="drawer" href="#my-drawer" data-icon="more" data-align="left"></a>
 	          <span data-role="view-title"></span>
-            <a data-role="button" data-align="right">Logout</a>
 	       </div>
       </header>
     </div>
@@ -39,31 +37,10 @@
       	       <a href="pages/main-menu.html" data-transition="slide">Login</a>
       	     </li>
              <li>
-                <a href="#">Continue without sign in</a>
+                <a href="pages/cont-without-login.html" data-transition="slide">Continue without sign in</a>
              </li>
           </ul>
         </li>
-      </ul>
-    </div>
-
-    <div data-role="drawer" id="my-drawer" style="width: 270px" data-views="['drawer-home', 'drawer-starred', 'drawer-deleted', 'drawer-spam', 'drawer-drafts', 'drawer-sent', '/kendo-ui/mobile/m/drawer/index.html']">
-      <ul data-role="listview" data-type="group">
-      	<li>Mailbox
-      	  <ul>
-      	    <li data-icon="inbox"><a href="#drawer-home" data-transition="none">Submit</a></li>
-      	    <li data-icon="star"><a href="#drawer-starred" data-transition="none">Starred Items</a></li>
-      	    <li data-icon="compose"><a href="#drawer-drafts" data-transition="none">Drafts</a></li>
-      	    <li data-icon="sent"><a href="#drawer-sent" data-transition="none">Sent Items</a></li>
-      	    <li data-icon="trash"><a href="#drawer-deleted" data-transition="none">Deleted Items</a></li>
-      	    <li data-icon="spam"><a href="#drawer-spam" data-transition="none">Spam</a></li>
-      	  </ul>
-      	</li>
-      	<li>Account
-      	  <ul>
-      	    <li data-icon="settings">Settings</li>
-      	    <li data-icon="off">Log Out</li>
-      	  </ul>
-      	</li>
       </ul>
     </div>
 
