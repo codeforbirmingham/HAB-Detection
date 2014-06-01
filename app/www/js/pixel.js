@@ -8,3 +8,19 @@ function pixelToRGB(canvas, x, y){
 
 	return {red,green,blue};
 }
+
+//assuming they are color objects
+//returns the average color difference in percentages
+function distanceRGB(color1, color2){
+	var diffRed   = Math.abs(color1.getRed() - color2.getRed());
+	var diffGreen = Math.abs(color1.getGreen() - color2.getGreen());
+	var diffBlue  = Math.abs(color1.getBlue() - color2.getBlue());
+	
+	//percentages
+	var perRed    = diffRed / 255;
+	var perGreen  = diffGreen / 255;
+	var perBlue   = diffBlue / 255;
+	
+	return((perRed + perGreen + perBlue) / 3 *100);
+
+}
