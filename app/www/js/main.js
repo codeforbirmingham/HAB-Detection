@@ -80,7 +80,7 @@ function toCanvas(base64){
 	var img    = new Image();
 	img.src    = "data:image/jpeg;base64," + base64;
 	img.onload = function(){
-		ctx.drawImage(img, 0, 0);
+		ctx.drawImage(img, 0, 0, 100, 100);
 	}
 }
 	
