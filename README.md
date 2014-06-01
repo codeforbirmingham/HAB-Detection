@@ -17,7 +17,7 @@ humans during consumption.
  
 ## How to Contribute
 
-Fork the repository and submit a pull request. We'll do out best to comment and approve as soon as possible.
+Fork the repository and submit a pull request. We'll do our best to comment and approve as soon as possible.
 
 ## Plugins
 - [org.apache.cordova.camera 0.2.9 "Camera"](https://github.com/apache/cordova-plugin-camera/blob/master/doc/index.md) 
