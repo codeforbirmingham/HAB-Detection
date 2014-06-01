@@ -84,3 +84,8 @@ function toCanvas(base64){
 	}
 }
 	
+function testImage(){
+    $.get("examples/testimage.txt", function(data){
+        toCanvas(data);
+    });
+}
