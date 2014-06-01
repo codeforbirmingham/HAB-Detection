@@ -82,5 +82,5 @@ function toCanvas(base64){
 	img.onload = function(){
 		ctx.drawImage(img, 0, 0);
 	}
-};
+}
 	
