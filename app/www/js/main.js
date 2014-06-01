@@ -78,7 +78,7 @@ function toCanvas(base64){
 	var canvas = document.getElementById('imgCanvas');
 	var ctx    = canvas.getContext('2d');
 	var img    = new Image();
-	img.src    = "data:image/ jpeg;base64," + base64;
+	img.src    = "data:image/jpeg;base64," + base64;
 	img.onload = function(){
 		ctx.drawImage(img, 0, 0);
 	}
