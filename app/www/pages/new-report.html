@@ -1,4 +1,4 @@
-<div data-role="view" id="drawer-home" data-layout="drawer-layout" data-title="EPA HAB Detection">
+<div data-role="view" id="drawer-home" data-layout="drawer-layout" data-title="New Report">
 	<ul data-role="listview" data-style="inset" data-type="group">
 		<li>
 			<ul>
@@ -14,9 +14,81 @@
 			<ul> 
 				<li>
 					<div style="display:block; text-align:center">
-						<a id="newButton" data-role="button" style="float:left; width:49%" onclick="getNewPhoto()">New</a>
-						<a id="existingButton" data-role="button"style="float:right; width:49%" onclick="getExistingPhoto();">Existing</a>
+						<a id="newButton" data-role="button" style="float:left; width:49%" onclick="photo.getNew()">New</a>
+						<a id="existingButton" data-role="button"style="float:right; width:49%" onclick="photo.getCurrent();">Existing</a>
 					</div>
+				</li>
+			</ul>
+		</li>
+		<li>Questions
+			<ul>
+				<li>
+					<lable>Bloom location <br> in water?
+						<input type="text" placeholder="Top of river">
+					</lable>
+				</li>
+				<li>
+					<label>Near drinking water?
+						<select>
+							<option disabled selected>Please Choose</option>
+							<option>Yes</option>
+							<option>No</option>
+						</select>
+					</label>
+				</li>
+				<li>
+					<label>Near public beach?
+						<select>
+							<option disabled selected>Please Choose</option>
+							<option>Yes</option>
+							<option>No</option>
+						</select>
+					</label>
+				</li>
+				<li>
+					<label>If yes, what beach?
+						<input type="text" placeholder="Palm Beach">
+					</label>
+				</li>
+				<li>
+					<label>Estimate Size (Sq. feet)
+						<input type="number" placeholder="100">
+					</label>
+				</li>
+				<li>
+					<label>Near a drinking <br> water intake?
+						<select>
+							<option disabled selected>Please Choose</option>
+							<option>Yes</option>
+							<option>No</option>
+							<option>Unknown</option>
+						</select>
+					</label>
+				</li>
+				<li>
+					<label>If yes, <br> what water system
+						<input type="text" placeholder="Water System">
+					</label>
+				</li>
+				<li>
+					<label>Samples Taken?
+						<select>
+							<option disabled selected>Please Choose</option>
+							<option>Yes</option>
+							<option>No</option>
+							<option>Unknown</option>
+						</select>
+					</label>
+				</li>
+				<li>
+					<label>What samples <br> were taken?
+						<textarea></textarea>
+					</label>
+				</li>
+				<li>
+					<label>Where were they sent?
+						<input type="text" placeholder="UAB">
+					</label>
 				</li>
 			</ul>
 		</li>
