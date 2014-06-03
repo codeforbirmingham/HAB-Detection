@@ -77,14 +77,14 @@ var photo = new photo();
 function toCanvas(base64){
 	var canvas = document.getElementById('imgCanvas');
 	
-	var img    = new Image();
-	img.src    = "data:image/jpeg;base64," + base64;
+	var img = new Image();
+	img.src = "data:image/jpeg;base64," + base64;
         
 	img.onload = function(){
             var width = canvas.width;
             var scalingRatio = width/img.width;
             canvas.height = scalingRatio * img.height;
-            var ctx    = canvas.getContext('2d');
+            var ctx = canvas.getContext('2d');
             
 	    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
             
